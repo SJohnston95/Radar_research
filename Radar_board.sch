@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -7931,6 +7931,82 @@ MAPDCC0010
 </deviceset>
 </devicesets>
 </library>
+<library name="SamacSys_Parts">
+<description>&lt;b&gt;https://componentsearchengine.com&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="SOT95P280X145-5N">
+<description>&lt;b&gt;TPS7A0533PDBVR-1&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.25" y="0.95" dx="1.2" dy="0.6" layer="1"/>
+<smd name="2" x="-1.25" y="0" dx="1.2" dy="0.6" layer="1"/>
+<smd name="3" x="-1.25" y="-0.95" dx="1.2" dy="0.6" layer="1"/>
+<smd name="4" x="1.25" y="-0.95" dx="1.2" dy="0.6" layer="1"/>
+<smd name="5" x="1.25" y="0.95" dx="1.2" dy="0.6" layer="1"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.1" y1="1.775" x2="2.1" y2="1.775" width="0.05" layer="51"/>
+<wire x1="2.1" y1="1.775" x2="2.1" y2="-1.775" width="0.05" layer="51"/>
+<wire x1="2.1" y1="-1.775" x2="-2.1" y2="-1.775" width="0.05" layer="51"/>
+<wire x1="-2.1" y1="-1.775" x2="-2.1" y2="1.775" width="0.05" layer="51"/>
+<wire x1="-0.8" y1="1.45" x2="0.8" y2="1.45" width="0.1" layer="51"/>
+<wire x1="0.8" y1="1.45" x2="0.8" y2="-1.45" width="0.1" layer="51"/>
+<wire x1="0.8" y1="-1.45" x2="-0.8" y2="-1.45" width="0.1" layer="51"/>
+<wire x1="-0.8" y1="-1.45" x2="-0.8" y2="1.45" width="0.1" layer="51"/>
+<wire x1="-0.8" y1="0.5" x2="0.15" y2="1.45" width="0.1" layer="51"/>
+<wire x1="-0.3" y1="1.45" x2="0.3" y2="1.45" width="0.2" layer="21"/>
+<wire x1="0.3" y1="1.45" x2="0.3" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="0.3" y1="-1.45" x2="-0.3" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="-0.3" y1="-1.45" x2="-0.3" y2="1.45" width="0.2" layer="21"/>
+<wire x1="-1.85" y1="1.5" x2="-0.65" y2="1.5" width="0.2" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TPS7A0533PDBVR">
+<wire x1="5.08" y1="2.54" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-7.62" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<text x="21.59" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="21.59" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="IN" x="0" y="0" length="middle"/>
+<pin name="GND" x="0" y="-2.54" length="middle"/>
+<pin name="EN" x="0" y="-5.08" length="middle"/>
+<pin name="NC" x="25.4" y="0" length="middle" direction="nc" rot="R180"/>
+<pin name="OUT" x="25.4" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TPS7A0533PDBVR" prefix="IC">
+<description>&lt;b&gt;1-A, ultra-low-IQ, 200-mA low-dropout (LDO) regulator in a small-sized package&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="TPS7A0533PDBVR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT95P280X145-5N">
+<connects>
+<connect gate="G$1" pin="EN" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="NC" pad="4"/>
+<connect gate="G$1" pin="OUT" pad="5"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="1-A, ultra-low-IQ, 200-mA low-dropout (LDO) regulator in a small-sized package" constant="no"/>
+<attribute name="HEIGHT" value="1.45mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7A0533PDBVR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-TPS7A0533PDBVR" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=595-TPS7A0533PDBVR" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7987,6 +8063,8 @@ MAPDCC0010
 <part name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:6240565/1"/>
 <part name="X_11" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="X_12" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="IC2" library="SamacSys_Parts" deviceset="TPS7A0533PDBVR" device=""/>
+<part name="X_13" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8114,6 +8192,11 @@ MAPDCC0010
 </instance>
 <instance part="X_11" gate="G$1" x="472.44" y="132.08" smashed="yes"/>
 <instance part="X_12" gate="G$1" x="335.28" y="25.4" smashed="yes"/>
+<instance part="IC2" gate="G$1" x="10.16" y="177.8" smashed="yes" rot="MR0">
+<attribute name="NAME" x="-11.43" y="185.42" size="1.778" layer="95" rot="MR0" align="center-left"/>
+<attribute name="VALUE" x="-11.43" y="182.88" size="1.778" layer="96" rot="MR0" align="center-left"/>
+</instance>
+<instance part="X_13" gate="G$1" x="25.4" y="160.02" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -8176,12 +8259,17 @@ MAPDCC0010
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="91.44" y1="66.04" x2="91.44" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="86.36" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="66.04" x2="76.2" y2="66.04" width="0.1524" layer="91"/>
 <junction x="91.44" y="66.04"/>
 <pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="76.2" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="81.28" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 <junction x="81.28" y="66.04"/>
+<pinref part="IC1" gate="G$1" pin="/RES"/>
+<wire x1="73.66" y1="99.06" x2="76.2" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="99.06" x2="76.2" y2="66.04" width="0.1524" layer="91"/>
+<junction x="76.2" y="66.04"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="GND@10"/>
@@ -8264,9 +8352,22 @@ MAPDCC0010
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VCC-"/>
-<wire x1="175.26" y1="157.48" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="157.48" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="157.48" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="157.48" x2="182.88" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="X_10" gate="G$1" pin="0"/>
+<pinref part="U2" gate="A" pin="1IN-"/>
+<wire x1="175.26" y1="172.72" x2="180.34" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="172.72" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
+<junction x="180.34" y="157.48"/>
+<pinref part="U2" gate="A" pin="2IN+"/>
+<wire x1="180.34" y1="165.1" x2="180.34" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="162.56" x2="180.34" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="165.1" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
+<junction x="180.34" y="165.1"/>
+<pinref part="U2" gate="A" pin="2IN-"/>
+<wire x1="175.26" y1="162.56" x2="180.34" y2="162.56" width="0.1524" layer="91"/>
+<junction x="180.34" y="162.56"/>
 </segment>
 <segment>
 <pinref part="X2" gate="G$1" pin="GND3"/>
@@ -8309,6 +8410,13 @@ MAPDCC0010
 <pinref part="X_12" gate="G$1" pin="0"/>
 <wire x1="335.28" y1="25.4" x2="335.28" y2="30.48" width="0.1524" layer="91"/>
 <junction x="335.28" y="30.48"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="GND"/>
+<wire x1="10.16" y1="175.26" x2="25.4" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="175.26" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="167.64" x2="25.4" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="X_13" gate="G$1" pin="0"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -8369,6 +8477,16 @@ MAPDCC0010
 <wire x1="231.14" y1="172.02" x2="231.14" y2="172.72" width="0.1524" layer="91"/>
 <label x="228.6" y="172.72" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="IN"/>
+<wire x1="10.16" y1="177.8" x2="17.78" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="177.8" x2="17.78" y2="180.34" width="0.1524" layer="91"/>
+<label x="17.78" y="198.12" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="EN"/>
+<wire x1="17.78" y1="180.34" x2="17.78" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="172.72" x2="17.78" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="172.72" x2="17.78" y2="177.8" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="TRIOUT" class="0">
 <segment>
@@ -8416,6 +8534,12 @@ MAPDCC0010
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="0" y1="99.06" x2="0" y2="114.3" width="0.1524" layer="91"/>
 <label x="0" y="114.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="OUT"/>
+<wire x1="-15.24" y1="175.26" x2="-27.94" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="175.26" x2="-27.94" y2="162.56" width="0.1524" layer="91"/>
+<label x="-27.94" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">

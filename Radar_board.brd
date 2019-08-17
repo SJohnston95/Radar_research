@@ -159,9 +159,9 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="97.77" y2="0" width="0" layer="20"/>
-<wire x1="97.77" y1="0" x2="97.77" y2="53.01" width="0" layer="20"/>
-<wire x1="97.77" y1="53.01" x2="0" y2="53.01" width="0" layer="20"/>
-<wire x1="0" y1="53.01" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="97.77" y1="0" x2="97.77" y2="53.391" width="0" layer="20"/>
+<wire x1="97.77" y1="53.391" x2="0" y2="53.264" width="0" layer="20"/>
+<wire x1="0" y1="53.264" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="SparkFun-Retired" urn="urn:adsk.eagle:library:533">
@@ -791,6 +791,37 @@ SE2568U-R
 </package>
 </packages>
 </library>
+<library name="SamacSys_Parts">
+<description>&lt;b&gt;https://componentsearchengine.com&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="SOT95P280X145-5N">
+<description>&lt;b&gt;TPS7A0533PDBVR-1&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.25" y="0.95" dx="1.2" dy="0.6" layer="1"/>
+<smd name="2" x="-1.25" y="0" dx="1.2" dy="0.6" layer="1"/>
+<smd name="3" x="-1.25" y="-0.95" dx="1.2" dy="0.6" layer="1"/>
+<smd name="4" x="1.25" y="-0.95" dx="1.2" dy="0.6" layer="1"/>
+<smd name="5" x="1.25" y="0.95" dx="1.2" dy="0.6" layer="1"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.1" y1="1.775" x2="2.1" y2="1.775" width="0.05" layer="51"/>
+<wire x1="2.1" y1="1.775" x2="2.1" y2="-1.775" width="0.05" layer="51"/>
+<wire x1="2.1" y1="-1.775" x2="-2.1" y2="-1.775" width="0.05" layer="51"/>
+<wire x1="-2.1" y1="-1.775" x2="-2.1" y2="1.775" width="0.05" layer="51"/>
+<wire x1="-0.8" y1="1.45" x2="0.8" y2="1.45" width="0.1" layer="51"/>
+<wire x1="0.8" y1="1.45" x2="0.8" y2="-1.45" width="0.1" layer="51"/>
+<wire x1="0.8" y1="-1.45" x2="-0.8" y2="-1.45" width="0.1" layer="51"/>
+<wire x1="-0.8" y1="-1.45" x2="-0.8" y2="1.45" width="0.1" layer="51"/>
+<wire x1="-0.8" y1="0.5" x2="0.15" y2="1.45" width="0.1" layer="51"/>
+<wire x1="-0.3" y1="1.45" x2="0.3" y2="1.45" width="0.2" layer="21"/>
+<wire x1="0.3" y1="1.45" x2="0.3" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="0.3" y1="-1.45" x2="-0.3" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="-0.3" y1="-1.45" x2="-0.3" y2="1.45" width="0.2" layer="21"/>
+<wire x1="-1.85" y1="1.5" x2="-0.65" y2="1.5" width="0.2" layer="21"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1154,6 +1185,16 @@ design rules under a new name.</description>
 <attribute name="NAME" x="28.321" y="11.811" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="31.242" y="11.811" size="1.27" layer="27" rot="R90"/>
 </element>
+<element name="IC2" library="SamacSys_Parts" package="SOT95P280X145-5N" value="TPS7A0533PDBVR" x="24.13" y="15.24" smashed="yes">
+<attribute name="DESCRIPTION" value="1-A, ultra-low-IQ, 200-mA low-dropout (LDO) regulator in a small-sized package" x="24.13" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.45mm" x="24.13" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" x="24.13" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7A0533PDBVR" x="24.13" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-TPS7A0533PDBVR" x="24.13" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=595-TPS7A0533PDBVR" x="24.13" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="21.59" y="10.16" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="13.97" y="15.24" size="1.27" layer="27" align="center"/>
+</element>
 </elements>
 <signals>
 <signal name="N$1">
@@ -1221,14 +1262,11 @@ design rules under a new name.</description>
 <wire x1="12.319" y1="31.115" x2="12.44" y2="31.115" width="0.2032" layer="1"/>
 <wire x1="28.073" y1="21.28" x2="28.234" y2="21.441" width="0.2032" layer="1"/>
 <wire x1="28.234" y1="21.441" x2="28.75055" y2="21.441" width="0.2032" layer="1"/>
-<polygon width="0.1524" layer="1">
-<vertex x="162.56" y="104.14"/>
-<vertex x="165.1" y="101.6"/>
-<vertex x="165.1" y="-3.81"/>
-<vertex x="0" y="-3.81"/>
-<vertex x="-8.89" y="5.08"/>
-<vertex x="-8.89" y="95.25"/>
-<vertex x="0" y="104.14"/>
+<polygon width="0.1524" layer="1" rank="2">
+<vertex x="97.79" y="53.34"/>
+<vertex x="97.79" y="0"/>
+<vertex x="0" y="0"/>
+<vertex x="0" y="53.34"/>
 </polygon>
 <contactref element="X2" pad="GND@2"/>
 <contactref element="X2" pad="GND@1"/>
@@ -1238,6 +1276,11 @@ design rules under a new name.</description>
 <contactref element="X1" pad="GND@3"/>
 <contactref element="X1" pad="GND@2"/>
 <contactref element="X1" pad="GND@1"/>
+<contactref element="IC1" pad="4"/>
+<contactref element="U2" pad="2"/>
+<contactref element="U2" pad="6"/>
+<contactref element="U2" pad="5"/>
+<contactref element="IC2" pad="2"/>
 <wire x1="49.53" y1="48.768" x2="49.53" y2="48.768" width="0" layer="19" extent="1-16"/>
 <wire x1="44.45" y1="48.768" x2="44.45" y2="48.768" width="0" layer="19" extent="1-16"/>
 <wire x1="11.43" y1="48.768" x2="11.43" y2="48.768" width="0" layer="19" extent="1-16"/>
@@ -1245,8 +1288,13 @@ design rules under a new name.</description>
 <wire x1="36.83" y1="25.5777" x2="36.18" y2="25.5777" width="0" layer="19" extent="1-1"/>
 <wire x1="34.4677" y1="27.94" x2="34.4677" y2="26.64" width="0" layer="19" extent="1-1"/>
 <wire x1="34.4677" y1="28.59" x2="34.4677" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="53.2638" y1="29.845" x2="53.2638" y2="32.385" width="0" layer="19" extent="1-1"/>
+<wire x1="12.44" y1="27.305" x2="14.185" y2="25.146" width="0" layer="19" extent="1-1"/>
 <wire x1="23.743" y1="19.98" x2="20.2956" y2="22.54" width="0" layer="19" extent="1-1"/>
 <wire x1="28.073" y1="21.28" x2="23.743" y2="19.98" width="0" layer="19" extent="1-1"/>
+<wire x1="22.88" y1="15.24" x2="23.743" y2="19.98" width="0" layer="19" extent="1-1"/>
+<wire x1="48.3362" y1="32.385" x2="53.2638" y2="32.385" width="0" layer="19" extent="1-1"/>
+<wire x1="48.3362" y1="31.115" x2="48.3362" y2="32.385" width="0" layer="19" extent="1-1"/>
 <wire x1="9.7087" y1="21.332" x2="14.185" y2="25.146" width="0" layer="19" extent="1-1"/>
 <wire x1="9.7087" y1="20.832" x2="9.7087" y2="21.332" width="0" layer="19" extent="1-1"/>
 <wire x1="8.763" y1="21.082" x2="9.7087" y2="21.332" width="0" layer="19" extent="1-1"/>
@@ -1310,6 +1358,21 @@ design rules under a new name.</description>
 <vertex x="31.75" y="24.13"/>
 <vertex x="31.75" y="34.29"/>
 <vertex x="16.51" y="34.29"/>
+</polygon>
+<contactref element="IC2" pad="1"/>
+<contactref element="IC2" pad="3"/>
+<polygon width="0.254" layer="1">
+<vertex x="20.32" y="17.78"/>
+<vertex x="24.13" y="17.78"/>
+<vertex x="24.13" y="12.7"/>
+<vertex x="3.81" y="12.7"/>
+<vertex x="2.54" y="13.97"/>
+<vertex x="2.54" y="26.289"/>
+<vertex x="6.35" y="26.289"/>
+<vertex x="6.35" y="24.892"/>
+<vertex x="4.318" y="24.892"/>
+<vertex x="4.318" y="16.51"/>
+<vertex x="19.05" y="16.51"/>
 </polygon>
 <wire x1="38.13" y1="30.3023" x2="39.1923" y2="26.64" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -1388,6 +1451,9 @@ design rules under a new name.</description>
 <vertex x="6.35" y="17.78"/>
 <vertex x="6.35" y="31.75"/>
 </polygon>
+<contactref element="IC2" pad="5"/>
+<wire x1="25.38" y1="16.19" x2="28.89" y2="16.19" width="0.508" layer="1"/>
+<wire x1="28.89" y1="16.19" x2="29.21" y2="16.51" width="0.508" layer="1"/>
 <wire x1="36.83" y1="13.55" x2="29.21" y2="13.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
@@ -1559,12 +1625,10 @@ design rules under a new name.</description>
 </signal>
 <signal name="GND">
 <polygon width="0.2032" layer="16" rank="4">
-<vertex x="-2.54" y="55.88"/>
-<vertex x="104.14" y="55.88"/>
-<vertex x="106.68" y="53.34"/>
-<vertex x="106.68" y="10.16"/>
-<vertex x="92.71" y="-3.81"/>
-<vertex x="-2.54" y="-3.81"/>
+<vertex x="0" y="53.34"/>
+<vertex x="97.79" y="53.34"/>
+<vertex x="97.79" y="0"/>
+<vertex x="0" y="0"/>
 </polygon>
 </signal>
 </signals>
