@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-11-07T02:12:26Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.4.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.640844,
+        "LayerNumber": 4,
+        "Name": {
+            "ProjectId": "Radar_board"
+        },
+        "Owner": "Stephen Johnston <johnston@pdx.edu>",
+        "Size": {
+            "X": 66.02,
+            "Y": 50.216
+        }
+    }
+}
