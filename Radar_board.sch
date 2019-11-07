@@ -8017,7 +8017,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <clearance class="0" value="0.508"/>
 </class>
 <class number="1" name="RF1" width="0" drill="0">
-<clearance class="1" value="0.1524"/>
+<clearance class="1" value="1.27"/>
 </class>
 </classes>
 <parts>
@@ -8052,8 +8052,8 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <part name="L2" library="L-07C33NJV6T" deviceset="L-07C33NJV6T" device=""/>
 <part name="L3" library="L-07C33NJV6T" deviceset="L-07C33NJV6T" device=""/>
 <part name="U2" library="NE5532DR" deviceset="NE5532DR" device=""/>
-<part name="X1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SMACONNECTOR" device="_EDGE" package3d_urn="urn:adsk.eagle:package:6240945/1"/>
-<part name="X2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SMACONNECTOR" device="_EDGE" package3d_urn="urn:adsk.eagle:package:6240945/1"/>
+<part name="RF_INPUT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SMACONNECTOR" device="_EDGE" package3d_urn="urn:adsk.eagle:package:6240945/1"/>
+<part name="RF_OUTPUT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SMACONNECTOR" device="_EDGE" package3d_urn="urn:adsk.eagle:package:6240945/1"/>
 <part name="X_10" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="R5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:6240565/1"/>
 <part name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:6240565/1"/>
@@ -8065,6 +8065,10 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <part name="X_12" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="IC2" library="SamacSys_Parts" deviceset="TPS7A0533PDBVR" device=""/>
 <part name="X_13" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="C7" library="SparkFun-Retired" library_urn="urn:adsk.eagle:library:533" deviceset=".1UF-CER" device="" value="0.1uF"/>
+<part name="C8" library="SparkFun-Retired" library_urn="urn:adsk.eagle:library:533" deviceset=".1UF-CER" device="" value="1uF"/>
+<part name="X_14" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
+<part name="X_15" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8157,11 +8161,11 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <attribute name="NAME" x="162.847109375" y="186.9426" size="2.085790625" layer="95" ratio="10" rot="SMR0"/>
 <attribute name="VALUE" x="161.658309375" y="147.6578" size="2.089159375" layer="96" ratio="10" rot="SMR0"/>
 </instance>
-<instance part="X1" gate="G$1" x="335.28" y="43.18" smashed="yes">
+<instance part="RF_INPUT" gate="G$1" x="335.28" y="43.18" smashed="yes">
 <attribute name="NAME" x="342.9" y="45.72" size="1.27" layer="95"/>
 <attribute name="VALUE" x="342.9" y="43.18" size="1.27" layer="95"/>
 </instance>
-<instance part="X2" gate="G$1" x="472.44" y="147.32" smashed="yes">
+<instance part="RF_OUTPUT" gate="G$1" x="472.44" y="147.32" smashed="yes">
 <attribute name="NAME" x="480.06" y="149.86" size="1.27" layer="95"/>
 <attribute name="VALUE" x="480.06" y="147.32" size="1.27" layer="95"/>
 </instance>
@@ -8197,6 +8201,16 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <attribute name="VALUE" x="-11.43" y="182.88" size="1.778" layer="96" rot="MR0" align="center-left"/>
 </instance>
 <instance part="X_13" gate="G$1" x="25.4" y="160.02" smashed="yes"/>
+<instance part="C7" gate="G$1" x="-17.78" y="170.18" smashed="yes">
+<attribute name="NAME" x="-16.256" y="173.101" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-16.256" y="168.021" size="1.778" layer="96"/>
+</instance>
+<instance part="C8" gate="G$1" x="-30.48" y="170.18" smashed="yes">
+<attribute name="NAME" x="-28.956" y="173.101" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-28.956" y="168.021" size="1.778" layer="96"/>
+</instance>
+<instance part="X_14" gate="G$1" x="-17.78" y="167.64" smashed="yes"/>
+<instance part="X_15" gate="G$1" x="-30.48" y="167.64" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -8225,7 +8239,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <pinref part="Q2" gate="G$1" pin="C"/>
 </segment>
 </net>
-<net name="0" class="0">
+<net name="GND" class="0">
 <segment>
 <wire x1="10.16" y1="71.12" x2="10.16" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="66.04" x2="17.78" y2="66.04" width="0.1524" layer="91"/>
@@ -8370,19 +8384,19 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <junction x="180.34" y="162.56"/>
 </segment>
 <segment>
-<pinref part="X2" gate="G$1" pin="GND3"/>
+<pinref part="RF_OUTPUT" gate="G$1" pin="GND3"/>
 <wire x1="469.9" y1="139.7" x2="469.9" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="GND4"/>
+<pinref part="RF_OUTPUT" gate="G$1" pin="GND4"/>
 <wire x1="469.9" y1="137.16" x2="472.44" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="472.44" y1="137.16" x2="474.98" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="474.98" y1="137.16" x2="474.98" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="X_11" gate="G$1" pin="0"/>
 <wire x1="472.44" y1="137.16" x2="472.44" y2="132.08" width="0.1524" layer="91"/>
 <junction x="472.44" y="137.16"/>
-<pinref part="X2" gate="G$1" pin="GND1"/>
+<pinref part="RF_OUTPUT" gate="G$1" pin="GND1"/>
 <wire x1="469.9" y1="154.94" x2="469.9" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="469.9" y1="157.48" x2="474.98" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="GND2"/>
+<pinref part="RF_OUTPUT" gate="G$1" pin="GND2"/>
 <wire x1="474.98" y1="157.48" x2="474.98" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="474.98" y1="157.48" x2="485.14" y2="157.48" width="0.1524" layer="91"/>
 <junction x="474.98" y="157.48"/>
@@ -8391,17 +8405,17 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <junction x="474.98" y="137.16"/>
 </segment>
 <segment>
-<pinref part="X1" gate="G$1" pin="GND1"/>
+<pinref part="RF_INPUT" gate="G$1" pin="GND1"/>
 <wire x1="332.74" y1="50.8" x2="332.74" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="55.88" x2="337.82" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="GND2"/>
+<pinref part="RF_INPUT" gate="G$1" pin="GND2"/>
 <wire x1="337.82" y1="55.88" x2="337.82" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="55.88" x2="360.68" y2="55.88" width="0.1524" layer="91"/>
 <junction x="337.82" y="55.88"/>
-<pinref part="X1" gate="G$1" pin="GND3"/>
+<pinref part="RF_INPUT" gate="G$1" pin="GND3"/>
 <wire x1="332.74" y1="35.56" x2="332.74" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="30.48" x2="335.28" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="X1" gate="G$1" pin="GND4"/>
+<pinref part="RF_INPUT" gate="G$1" pin="GND4"/>
 <wire x1="335.28" y1="30.48" x2="337.82" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="30.48" x2="337.82" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="360.68" y1="55.88" x2="360.68" y2="30.48" width="0.1524" layer="91"/>
@@ -8417,6 +8431,14 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 <wire x1="25.4" y1="175.26" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="167.64" x2="25.4" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="X_13" gate="G$1" pin="0"/>
+</segment>
+<segment>
+<pinref part="X_14" gate="G$1" pin="0"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="X_15" gate="G$1" pin="0"/>
+<pinref part="C8" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -8537,9 +8559,15 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="OUT"/>
-<wire x1="-15.24" y1="175.26" x2="-27.94" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="175.26" x2="-27.94" y2="162.56" width="0.1524" layer="91"/>
-<label x="-27.94" y="157.48" size="1.778" layer="95"/>
+<wire x1="-15.24" y1="175.26" x2="-17.78" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="175.26" x2="-30.48" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="175.26" x2="-48.26" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="175.26" x2="-48.26" y2="162.56" width="0.1524" layer="91"/>
+<label x="-48.26" y="160.02" size="1.778" layer="95"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<junction x="-17.78" y="175.26"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<junction x="-30.48" y="175.26"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -8636,7 +8664,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 </net>
 <net name="N$14" class="1">
 <segment>
-<pinref part="X1" gate="G$1" pin="ANT"/>
+<pinref part="RF_INPUT" gate="G$1" pin="ANT"/>
 <wire x1="327.66" y1="43.18" x2="243.84" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="243.84" y1="43.18" x2="243.84" y2="63.5" width="0.1524" layer="91"/>
@@ -8644,7 +8672,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps7a05"&gt; Datasheet &lt;/a&gt;<
 </net>
 <net name="N$10" class="1">
 <segment>
-<pinref part="X2" gate="G$1" pin="ANT"/>
+<pinref part="RF_OUTPUT" gate="G$1" pin="ANT"/>
 <wire x1="464.82" y1="147.32" x2="439.42" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="439.42" y1="147.32" x2="439.42" y2="152.4" width="0.1524" layer="91"/>
